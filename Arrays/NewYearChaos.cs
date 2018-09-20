@@ -49,5 +49,51 @@ namespace Arrays
                 Console.WriteLine(ctr);
             }
         }
+
+        public static void minimumBribes1(int[] q)
+        {
+            bool chaotic = false;
+            int sum = 0;
+            var temp1 = 0;
+            for (int i = 0; i < q.Length; i++)
+            {
+                bool matched = true;
+                for (int j = 0; j < q.Length - 1; j++)
+                {
+                    var k = q[j] - (j + 1);
+                    if (k > 2)
+                    {
+                        chaotic = true;
+                        break;
+                    }
+
+                    if (q[j] > q[j + 1])
+                    {
+                        temp1 = q[j];
+                        q[j] = q[j + 1];
+                        q[j + 1] = temp1;
+                        sum++;
+                    }
+
+
+                    if (q[j] != j + 1)
+                    {
+                        matched = false;
+                    }
+                }
+
+                if (matched)
+                {
+                    break;
+                }
+
+            }
+
+            if (chaotic)
+                Console.WriteLine("Too Chaotic");
+            else
+                Console.WriteLine(sum);
+
+        }
     }
 }

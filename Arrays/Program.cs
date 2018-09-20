@@ -16,7 +16,10 @@ namespace Arrays
             //    Console.WriteLine(a[i]);
             //}
 
-            NewYearChaos.minimumBribes(new int[] { 2, 1, 5, 3, 4 });
+            //NewYearChaos.minimumBribes(new int[] { 1, 2, 5, 3, 7, 8, 6, 4 });
+            //NewYearChaos.minimumBribes1(new int[] { 1, 2, 5, 3, 7, 8, 6, 4 });
+
+            Console.WriteLine(MinimumSwaps.minimumSwaps(new int[] { 7, 1, 3, 2, 4, 5, 6 }));
 
             Console.Read();
         }
